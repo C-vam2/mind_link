@@ -12,9 +12,13 @@ class Homepagescreen extends StatefulWidget {
 }
 
 class _HomepagescreenState extends State<Homepagescreen> {
-  int currIdx = 2;
+  int currIdx = 0;
 
   List<BottomNavigationBarItem> itemList = [
+    BottomNavigationBarItem(
+      icon: Icon(Icons.text_snippet_rounded),
+      label: "Text",
+    ),
     BottomNavigationBarItem(
       icon: Icon(Icons.play_circle_fill_rounded),
       label: "Videos",
@@ -23,16 +27,12 @@ class _HomepagescreenState extends State<Homepagescreen> {
       icon: Icon(Icons.image_rounded),
       label: "Image",
     ),
-    BottomNavigationBarItem(
-      icon: Icon(Icons.text_snippet_rounded),
-      label: "Text",
-    ),
   ];
 
   List<Widget> screens = [
+    TextPostScreen(),
     VideoPostScreen(),
     ImagePostScreen(),
-    TextPostScreen(),
   ];
 
   @override

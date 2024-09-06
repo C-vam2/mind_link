@@ -56,7 +56,7 @@ class _VideoPostCardState extends State<VideoPostCard> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: !kIsWeb ? EdgeInsets.all(50) : null,
+      margin: kIsWeb ? EdgeInsets.all(50) : null,
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 15),
       child: Card(
         elevation: 8,
